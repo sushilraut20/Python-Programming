@@ -1,5 +1,8 @@
 #-----------Check whether given String is Palindrome-----------------------
 
+
+print("Example ---> Check whether given String is Palindrome")
+
 #Take input from user and convert the String in lower case
 input_string=input("Enter the String: ").lower()
 
@@ -11,6 +14,8 @@ if input_string==input_string[::-1]:
 
 #-----------Check whether given sub-string is present in String-----------------------
 
+print("Example ---> Check whether given sub-string is present in String")
+
 input_string=input("Enter a String: ")
 input_substring=input("Enter a sub string: ")
 
@@ -20,6 +25,8 @@ else:
     print(input_substring,"is NOT PRESENT in", input_string)
 
 #-----------Check number of occurrences of a substring in a given String-----------------------
+
+print("Example ---> Check number of occurrences of a substring in a given String")
 
 input_string=input("Enter a String: ")
 input_substring=input("Enter a sub string: ")
@@ -45,6 +52,8 @@ else:
 
 #-----------Input: D2A4C1F9, Output: ACDF1249---------------------------------------------------
 
+print("Example ---> Input: D2A4C1F9, Output: ACDF1249")
+
 input_string=input("Enter an alphanumeric String: ")
 alphabets_string=numeric_string=sorted_alphanumeric_string=''
 
@@ -66,6 +75,8 @@ print("sorted alphanumeric string: ", sorted_alphanumeric_string)
 #-----------Input: A2B4C3, Output: AABBBBCCC ---------------------------------------------------
 #Note: The integers must be less than 10 and greater than 0
 
+print("Example ---> Input: A2B4C3, Output: AABBBBCCC")
+
 input_string=input("Enter an alphanumeric String: ")
 alphabets_list=[]
 numeric_list=[]
@@ -79,5 +90,27 @@ for str in input_string:
 
 for i in range(len(alphabets_list)):
     output_string+=alphabets_list[i]*numeric_list[i]
+
+print("Output string: ", output_string)
+
+
+#-----------Input: A2B4C3, Output: ACBFG ---------------------------------------------------
+#Note: The integers must be less than 10 and greater than 0
+
+print("Example ---> Input: A2B4C3, Output: ACBFG")
+
+input_string=input("Enter an alphanumeric String: ")
+output_string=''
+previous=''
+
+#ord('A')= 65
+#chr(65)= 'A'
+
+for str in input_string:
+    if str.isalpha():
+        output_string+=str
+        previous=str
+    elif str.isdigit():
+        output_string+=chr(ord(previous)+int(str))
 
 print("Output string: ", output_string)
