@@ -5,8 +5,13 @@ sum of elements to the right is exactly same as that of sum of elements to the r
 
 i.e. input_list[2]= 3 and sum(all elements to left)=10 and sum(all elements to right)=10
 
-Note: here 'else' to the end will get executed when break in the main body will not get executed.
+Note: Here 'else' to the end will get executed when break in the main body will not get executed.
      i.e. There is no such element in the list which satisfies above condition
+
+Logic:1) Start with the middle index in the list
+      2) Check sum(elements to the left) and sum(elements to the right), return index if equal
+      3) if sum(elements to the left) > sum(elements to the right), decrement index and repeat step(2)
+      4) if sum(elements to the left) < sum(elements to the right), increment index and repeat step(2)
 """
 
 import math
