@@ -130,7 +130,7 @@ while i<len(input_string1) or j<len(input_string2):
     if(i>=len(input_string1)):
         output+=input_string2[j]
     elif(j>=len(input_string2)):
-        output+=input_string1[j]
+        output+=input_string1[i]
     else:
         output+=input_string1[i]+input_string2[j]
     i=i+1
