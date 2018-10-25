@@ -167,7 +167,7 @@ for alphabet in input_string:
 #occurrences_dict.get(alphabet,0) will fetch the value for that alphabet(key), if not present then will return 0
 
 
-for key,value in occurrences_dict.keys():
+for key,value in occurrences_dict.items():
     print(key,"------->",value)
 
 
