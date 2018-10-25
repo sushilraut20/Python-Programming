@@ -157,3 +157,18 @@ else:
 
 print(isAnagram)
 
+#-----------Counting occurrences of alphabets in a String using dictionary -----------------------------------
+
+input_string=input("Enter a String: ")
+occurrences_dict={}
+
+for alphabet in input_string:
+    occurrences_dict[alphabet]=occurrences_dict.get(alphabet,0)+1
+#occurrences_dict.get(alphabet,0) will fetch the value for that alphabet(key), if not present then will return 0
+
+
+for key,value in occurrences_dict.keys():
+    print(key,"------->",value)
+
+
+
