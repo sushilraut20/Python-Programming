@@ -184,4 +184,4 @@ for alphabet in input_string:
 for key,value in vowel_occurrences_dict.items():
     print(key,"------->",value)
 
-
+#-----------Counting occurrences of vowels in a String using dictionary -----------------------------------
