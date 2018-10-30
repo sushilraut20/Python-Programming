@@ -159,12 +159,12 @@ print(isAnagram)
 
 #-----------Counting occurrences of alphabets in a String using dictionary -----------------------------------
 
-input_string=input("Enter a String: ")
+input_string=input("Enter a String: ").lower()
 occurrences_dict={}
 
 for alphabet in input_string:
     occurrences_dict[alphabet]=occurrences_dict.get(alphabet,0)+1
-#occurrences_dict.get(alphabet,0) will fetch the value for that alphabet(key), if not present then will return 0
+#occurrences_dict.get(alphabet,0) will fetch the value for that alphabet(key), returns 0 if not present
 
 
 for key,value in sorted(occurrences_dict.items()):
@@ -172,7 +172,7 @@ for key,value in sorted(occurrences_dict.items()):
 
 #-----------Counting occurrences of vowels in a String using dictionary -----------------------------------
 
-input_string=input("Enter a String: ")
+input_string=input("Enter a String: ").lower()
 vowel_occurrences_dict={'a':0,'e':0,'i':0,'o':0,'u':0}
 
 for alphabet in input_string:
