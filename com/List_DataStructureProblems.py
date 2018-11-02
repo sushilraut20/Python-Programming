@@ -126,3 +126,12 @@ for sentence in paragraph:
 
 for word in unique_words_list:
     print("'",word,"'", " is present in paragraph for ","'",paragraph_words_list.count(word),"'", "times")
+
+#----------------------------------------To check if all elements in List are same----------------------------------------
+
+input_list=[2,2,2,1]
+
+if(sorted(input_list)==sorted(input_list)[::-1]):
+    print("All elements in List are same")
+else:
+    print("All elements in List are not same")
