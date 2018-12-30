@@ -184,7 +184,7 @@ for alphabet in input_string:
 for key,value in vowel_occurrences_dict.items():
     print(key,"------->",value)
 
-#-----------Reversing words in a sentence -----------------------------------
+#-----------Reversing words in a sentence: 1-----------------------------------
 
 sentence="Durga Software Solutions"
 temp=sentence.split()
@@ -197,5 +197,18 @@ for word in temp:
     if(temp.index(word)<len(temp)-1):
         sentence+=' '
 
+
+print(sentence)
+
+#-----------Reversing words in a sentence: 2-----------------------------------
+
+sentence="Durga Software Solutions"
+temp=sentence.split()
+sentence_list=[]
+
+for word in temp:
+    sentence_list.append(word[::-1])
+
+sentence=" ".join(sentence_list)
 
 print(sentence)
