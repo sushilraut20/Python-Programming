@@ -17,17 +17,26 @@ Logic:1) Start with the middle index in the list
 
 import math
 
-input_list=[1,1,1,1,1,1,1,0,7]
+input_list=[1,2,3,4,5,6,7,8,9]
 list_length=len(input_list)
+indexVisited={}
 
 index=math.ceil(list_length/2)
 
-while 0<=index<len(input_list):
-    if(sum(input_list[:index])==sum(input_list[index+1:])):
+while True:
+    if(indexVisited.get(index)!=True):
+        indexVisited[index]=True
+    else:
+        print("There is no any element in List where the given condition gets satisfied")
+        break
+
+    left=sum(input_list[:index])
+    right=sum(input_list[index+1:])
+    if(left == right):
         print("The index in List at which the sum of elements to right is exactly same as that to right is: ",index)
         break
-    elif(sum(input_list[:index])>sum(input_list[index:])):
+    elif(left > right):
         index=index-1
     else:
         index=index+1
-else: print("There is no any element in List where the given condition gets satisfied")
+
